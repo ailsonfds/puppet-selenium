@@ -8,6 +8,7 @@ define selenium::config(
   $group        = $selenium::params::group,
   $install_root = $selenium::params::install_root,
   $options      = $selenium::params::server_options,
+  $d_opts       = $selenium::params::server_d_opts,
   $java         = $selenium::params::java,
   $jar_name     = $selenium::jar_name,
 ) {
@@ -16,6 +17,7 @@ define selenium::config(
   validate_string($group)
   validate_string($install_root)
   validate_string($options)
+  validate_string($d_opts)
   validate_string($java)
   validate_string($jar_name)
 
